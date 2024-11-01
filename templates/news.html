@@ -1,0 +1,86 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Document</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+</head>
+<body>
+    <div class="shade">
+    <marquee behavior="alternate" direction="right">welcome to {{newsname}} news portel</marquee>
+    <ul>
+        <li>{{user1}}</li>
+        <li>{{user2}}</li>
+        <li>{{user3}}</li>
+    </ul>
+    {% if types == "movies" %}
+        <div class="imases-in">
+        <div>
+        <span><img src="{% static 'images/movie1.png' %}" alt=""></span>
+        </div>
+        <div>
+        <span><img src="{% static 'images/movie2.avif' %}" alt=""></span>
+        </div>
+        <div>
+        <span><img src="{% static 'images/movie3.jpg' %}" alt=""></span>
+        </div>
+        </div>
+        <style>
+            marquee{
+                padding: 30px;
+                color: rgb(72, 206, 236);
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+        </style>
+    {% elif types == "sports" %}
+        <div class="imases-in">
+        <div>
+        <span><img src="{% static 'images/sports1.jpg' %}" alt=""></span>
+        </div>
+        <div>
+        <span><img src="{% static 'images/sports2.jpg' %}" alt=""></span>
+        </div>
+        <div>
+        <span><img src="{% static 'images/sports3.jpg' %}" alt=""></span>
+        </div>
+        </div>
+        <style>
+            marquee{
+                padding: 30px;
+                color: rgb(204, 31, 181);
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+        </style>
+    {% elif types == "politics" %}
+        <div class="imases-in">
+        <div>
+        <span><img src="{% static 'images/politics1.jpg' %}" alt=""></span>
+        </div>
+        <div>
+        <span><img src="{% static 'images/politics2.jpg' %}" alt=""></span>
+        </div>
+        <div>
+        <span><img src="{% static 'images/politics3.jpg' %}" alt=""></span>
+        </div>
+        </div>
+        <style>
+            marquee{
+                padding: 30px;
+                color: rgb(140, 9, 216);
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+        </style>
+    {% endif %}
+</div>
+</body>
+</html>
